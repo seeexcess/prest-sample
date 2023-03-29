@@ -1,0 +1,29 @@
+@import "../styles/abstract.scss";
+
+.ratecheck {
+
+  &__card {
+    background: var(--color-secondary-light);
+    padding: 40px;
+    color: var(--color-text-dark);
+    width: 48%;
+
+    @include breakpoint(bp-700) {
+      width: 47%;
+      padding: 30px;
+    }
+    @include breakpoint(bp-600) {
+      width: 100%;
+      padding: 40px;
+    }
+  }
+
+  &__cardtitle {
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+
+  &__carddesc {
+    font-size: 1.4rem;
+  }
+}

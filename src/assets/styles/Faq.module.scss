@@ -1,0 +1,34 @@
+@import "../styles/abstract.scss";
+
+.faq {
+  background: var(--color-secondary-light);
+  padding: 50px 0;
+
+  &__container {
+    width: 60%;
+  }
+
+  &__title {
+    color: var(--color-text-dark);
+    text-align: center;
+  }
+
+  &__desc {
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 20px;
+  }
+}
+
+
+// @keyframes sweep {
+//   from {
+//     opacity: 0;
+//     margin-top: -10px;
+//   }
+
+//   to {
+//     opacity: 1;
+//     margin-top: 0;
+//   }
+// }

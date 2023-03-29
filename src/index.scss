@@ -1,0 +1,54 @@
+:root {
+  --color-primary: #326CF6;
+  --color-primary-dark: #0B2253;
+  --color-text-light: #6D7A98;
+  --color-text-dark: #0B2253;;
+  --color-secondary: #F1F4FC;
+  --color-secondary-light: #F7F9FB;
+  --color-accent: #F5F8FF;
+  --color-gray: #A5ADC0;
+  --color-gray-2: #EAECF0;
+  --color-gray-3: #DEE3EB;
+  --color-white: #FFFFFF;
+  --color-black: #000000;
+
+  --shadow-btm-1: rgba(27, 31, 35, 0.04) 0px 1px 0px,rgba(255, 255, 255, 0.25) 0px 1px 0px inset;
+  --shadow-btn-1: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+
+  --font-1: 1.6rem; 
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Rubik', sans-serif;
+  font-size: var(--font-1);
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--color-text-light);
+}
+
+.container {
+  width: 80%;
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}

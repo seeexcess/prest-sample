@@ -1,0 +1,37 @@
+@import "../styles/abstract.scss";
+
+.accordion {
+  padding: 10px 0;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid var(--color-gray-2);
+  }
+
+  &__titlebox {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 25px 0;
+    cursor: pointer;
+
+    svg {
+      color: var(--color-primary);
+    }
+  }
+
+  &__title {
+    font-size: 1.4rem;
+    color: var(--color-text-dark);
+  }
+
+  &__content {
+    display: none;
+    transition: all .5s cubic-bezier(0, 1, 0, 1);
+    margin-bottom: 10px;
+
+    &.show {
+      display: block;
+      transition: all .5s cubic-bezier(1, 0, 1, 0);
+    }
+  }
+}

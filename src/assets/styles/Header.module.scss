@@ -1,0 +1,153 @@
+@import "./abstract.scss";
+
+.header {
+  background: var(--color-white);
+  box-shadow: var(--shadow-btm-1);
+  padding: 1rem 0;
+  @include breakpoint(bp-400) {
+    padding: 1rem 2rem;
+  }
+  transition: all .3s ease-in-out;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    overflow: hidden;
+    position: relative;
+    z-index: 100;
+  }
+
+  &__logo {
+    //flex-basis: 10%;
+    margin-right: auto;
+  }
+
+  &__navcontent {
+    flex-basis: 70%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    background: transparent;
+    position: static;
+
+    @include breakpoint(bp-900) { //nav
+      height: 100vh;
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: fixed;
+      top: 0;
+      //right: 100%;
+      left: 100%;
+      bottom: 0;
+      background: var(--color-gray);
+      box-shadow: var(--shadow-btn-1);
+      backdrop-filter: blur(2px);
+      transform: translate(0);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    &.isMenu {
+      transform: translate(-100%);
+    }
+  }
+
+  &__navigation {
+
+    ul {
+      display: flex;
+      flex-direction: row;
+      gap: 2rem;
+      align-items: center;
+      margin-bottom: 0;
+      margin-right: .5rem;
+
+      @include breakpoint(bp-900) { //nav
+        flex-direction: column;
+        margin-bottom: .5rem;
+      }
+
+      li {
+        &:not(:last-child) {
+          margin-right: .5rem;
+          margin-bottom: 0;
+
+          @include breakpoint(bp-700) {
+            margin-bottom: .5rem;
+          }
+        }
+
+        a {
+          font-size: 1.5rem;
+          color: var(--color-primary-dark);
+          transition: all .3s ease-in-out;
+
+          &:hover {
+            color: rgba(var(--color-primary-dark), .3);
+          }
+        }
+      }
+    }
+  }
+
+  &__access {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    gap: 2rem;
+    color: var(--color-primary);
+
+    @include breakpoint(bp-900) {
+      flex-direction: column;
+    }
+
+    .login {
+      font-size: 1.4rem;
+      color: inherit;
+      transition: all .3s ease-in-out;
+
+      &:hover {
+        color: var(--color-primary-dark);
+      }
+    }
+
+    .signup {
+      background: var(--color-primary);
+      color: var(--color-white);
+      padding: .7rem 1.5rem;
+      border-radius: 5px;
+      transition: all .3s ease-in-out;
+
+      &:hover {
+        box-shadow: var(--shadow-btn-1);
+        color: var(--color-primary);
+        background: var(--color-white);
+      }
+    }
+  }
+
+  &__toggle {
+    color: var(--color-primary-dark);
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    font-size: 2rem;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    
+    &:hover {
+      color: rgba(var(--color-primary-dark), .3);
+    }
+
+    @include breakpoint(bp-900) { //nav
+      display: flex;
+    }
+  }
+}

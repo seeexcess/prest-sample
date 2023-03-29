@@ -1,0 +1,196 @@
+@import "../styles/abstract.scss";
+
+.rateform {
+
+  &__container {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+    @include breakpoint(bp-800) {
+      flex-direction: column;
+    }
+  }
+
+  &__text {
+    flex-basis: 50%;
+
+    h1 {
+      font-weight: 500;
+      font-size: 4.5rem;
+      line-height: 1.25;
+      color: var(--color-text-dark);
+      margin: 10px 0;
+
+      @include breakpoint(bp-1000) {
+        font-size: 3.5rem;
+      }
+    }
+  }
+
+  &__experience {
+    width: 24rem;
+    display: flex;
+    align-items: center;
+    background-color: var(--color-accent);
+    color: var(--color-primary);
+    font-size: 1.4rem;
+    padding: 5px 5px 5px 0;
+    border-radius: 16px;
+
+    svg {
+      font-size: 2rem;
+    }
+
+    &_new {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: var(--color-white);
+      padding: 2px 10px;
+      margin-right: auto;
+      border-radius: 16px;
+    }
+  }
+
+  &__formbox {
+    width: 50%;
+    background: var(--color-secondary);
+    padding: 55px;
+    border-radius: 0px 0px 4px 4px;
+
+    @include breakpoint(bp-1000) {
+      padding: 30px;
+    }
+
+    @include breakpoint(bp-800) {
+      width: 100%;
+      padding: 55px;
+    }
+
+    @include breakpoint(bp-500) {
+      width: 100%;
+      padding: 30px;
+    }
+  }
+
+  &__form {
+    background: var(--color-white);
+    padding: 30px;
+    border-radius: 8px;
+  }
+
+  &__inputgroup {
+
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+
+    &_input {
+      width: 100%;
+      display: block;
+      padding: 12px 16px;
+      font-family: inherit;
+      color: var(--color-text-dark);
+      background: var(--color-white);
+      border: 1px solid var(--color-gray);
+      border-radius: 4px;
+    }
+
+    label {
+      font-size: 1.2rem;
+      line-height: 2;
+      color: var(--color-text-light);
+    }
+
+    select {
+      cursor: pointer;
+
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="50"><polygon points="0,0 100,0 50,50" style="fill:%236D7A98;" /></svg>');
+      background-position: right 10px top 50%;
+      background-repeat: no-repeat;
+      background-size: 10px;
+
+      &:focus,
+      &:hover {
+        outline: none;
+        border: 1px solid;
+      }
+    }
+
+    input[type="text"]::-webkit-input-placeholder {
+      color: var(--color-text-dark);
+    }
+  }
+
+  &__payoutbox {
+
+    label {
+      font-size: 1.2rem;
+      line-height: 2;
+      color: var(--color-text-light);
+    }
+  }
+
+  &__payout {
+    display: flex;
+    gap: 2rem;
+
+    @include breakpoint(bp-1000) {
+      flex-direction: column;
+      gap: .5rem;
+    }
+
+    @include breakpoint(bp-1000) {
+      flex-direction: row;
+      gap: 2rem;
+    }
+
+    &_select {
+      width: 40%;
+
+      @include breakpoint(bp-1000) {
+        width: 100%;
+      }
+
+      @include breakpoint(bp-800) {
+        width: 40%;
+      }
+    }
+
+    &_text {
+      width: 60%;
+      
+      @include breakpoint(bp-1000) {
+        width: 100%;
+      }
+
+      @include breakpoint(bp-1000) {
+        width: 60%;
+      }
+    }
+  }
+
+  &__formbtn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    padding: 10px 10px;
+    margin-top: 10px;
+    font-family: inherit;
+    color: var(--color-white);
+    background: var(--color-primary);
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+
+    svg {
+      font-size: 2rem;
+    }
+  }
+}

@@ -1,0 +1,143 @@
+@import "../styles/abstract.scss";
+
+.footer {
+  background: var(--color-primary-dark);
+
+  &__container {
+    padding: 30px 0;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+    margin: 30px 0;
+
+    @include breakpoint(bp-700) {
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+
+  &__customers {
+    width: 60%;
+
+    @include breakpoint(bp-700) {
+      width: 100%;
+    }
+
+    &_title {
+      color: var(--color-white);
+    }
+
+    &_desc {
+      font-size: 1.5rem;
+      margin-top: 10px;
+    }
+  }
+
+  &__signup {
+    
+    button {
+      font-family: inherit;
+      background: var(--color-primary);
+      color: var(--color-white);
+      padding: 12px 24px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+  }
+
+  &__brandbox {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 50px 0;
+    border-bottom: .5px solid var(--color-text-light);
+    border-top: .5px solid var(--color-text-light);
+
+    @include breakpoint(bp-800) {
+      flex-direction: column;
+      gap: 40px;
+    }
+  }
+
+  &__brand {
+    width: 30%;
+
+    @include breakpoint(bp-800) {
+      width: 100%;
+    }
+  }
+
+  &__brandlogo {
+
+  }
+
+  &__branddesc {
+    font-size: 1.5rem;
+    margin: 20px 0;
+  }
+
+  &__contact {
+
+  }
+
+  &__linkbox {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+
+    @include breakpoint(bp-600) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__links {
+    width: 25%;
+    color: var(--color-white);
+
+    @include breakpoint(bp-600) {
+      width: 45%;
+    }
+
+    h4 {
+      font-size: 1.4rem;
+      margin-bottom: 10px;
+    }
+
+    ul {
+
+      li {
+        margin: 5px 0;
+        a {
+          color: var(--color-gray-3);
+          font-size: 1.3rem;
+        }
+      }
+    }
+  }
+
+  &__foot {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--color-white);
+    margin: 20px 0;
+  }
+
+  &__copyright {
+    font-size: 1.4rem;
+  }
+
+  &__socials {
+    display: flex;
+    gap: 10px;
+
+    a {
+      color: var(--color-white);
+    }
+  }
+}
